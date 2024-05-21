@@ -1,0 +1,113 @@
+/* 「根」等同於html檔案裡面的<html>，在這裡把顏色設定成變量可以方便管理調整會一直使用到的顏色，也不用每次使用顏色都寫色票 */
+:root {
+    --white: #F5F7EF;
+    --light-pink: #F7CCC4;
+    --pink: #F5A9B5;
+    --pale-pink: #DFAAB6;
+    --dark-pink: #DC7692;
+}
+
+body {
+    background-color: var(--white);
+    margin: 0; /* 因為瀏覽器預設會有margin: 8px，所以把margin設為0這樣比較方便調位置 */
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    background-color: var(--pink);
+    display: flex; /* 因為header裡面的物件要橫向排列，所以要用flex */
+}
+
+header .logo {
+    height: 100%; /* 跟他的爸爸<header>一樣高 */
+    width: calc(100% * 2 / 12); /* calc就是單字calculate計算的意思，計算寬度為爸爸<header>寬度的100%的2/12 */
+
+    display: flex; /* 以下就是在display設為flex的情況下 */
+    justify-content: center; /* 左右置中 */
+    align-items: center; /* 上下置中 */
+}
+
+header .logo img {
+    height: 80%; /* 80%是根據誰上面寫過了！接下來重複的都自己找囉！ */
+}
+
+header nav {
+    height: 100%;
+    width: calc(100% * 8 / 12);
+}
+
+header nav ul {
+    height: 100%;
+    display: flex; /* 為了讓ul裡面的li都橫向排列 */
+    list-style-type: none; /* ul有預設每個li前面都有一個點，把他去掉 */
+
+    margin: 0;
+    padding: 0; /* ul預設會往右移一點點，我也不知道為啥，反正這樣可以解決 */
+}
+
+header nav ul li {
+    height: 100%;
+    width: 20%;
+}
+
+header nav ul li:hover {
+    background-color: var(--pale-pink);
+}
+
+header nav ul li a {
+    display: block; /* 因為本來超連結<a>跟<p>一樣是行級元素，所以把它變成block塊級元素，可以佔滿整個li，讓整個li都可以按到超連結 */
+    height: 100%;
+    width: 100%;
+    
+    /* 上面說過囉～～ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none; /* 讓超連結醜巴巴的底線不見 */
+    color: black; /* 動動腦筋！為啥我要特別設為黑色嘎嘎嘎（問題一） */
+}
+
+header .search {
+    height: 100%;
+    width: calc(100% * 2 / 12);
+    display: flex; /* 自己想！為什麼要寫這個，然後告訴我！！（問題二） */
+    justify-content: center;
+    align-items: center;
+}
+
+header .search input {
+    height: 30px;
+    outline: none; /* 把input框被點選後預設的藍色框框線刪掉 */
+    border: none; /* 把input框預設的外框線刪掉 */
+    border-radius: 999px; /* 把圓角變超大，意思就是把角變原形，因為圓形不能再圓了 */
+    padding-left: 12px;
+    margin-right: 5px;
+}
+
+header .search button {
+    height: 30px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--light-pink);
+    margin-left: 5px;
+
+    cursor: pointer; /* 這比較特別！，瀏覽器預設<a>跟<button>應該手放上去會變小手手
+    但是！但是！有時會被奇怪的原因覆蓋，甚至根本不知道為啥，所以加上這行可以一定讓他變小手手 */
+}
+
+header .search button:active {
+    /* （問題三）active是什麼用途？為什麼這要用active？ */
+    background-color: var(--pale-pink);
+}
+
+article {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+article h1 {
+    font-size: 2.5em; /* 2.5em就是爸爸字體的大小的2.5倍，爸爸article沒有設定字體大小那就是預設16px的2.5倍，可以自己改成40px試試看！
+    這樣做方便我們依照相同比例，只要改article甚至只要改body的字體大小就能等比例改全部內容字體大小，不用改超多卻漏改或爆版*/
+}
