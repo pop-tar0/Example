@@ -8,12 +8,13 @@
     <link rel="icon" href="/img/icon.png">
 </head>
 <body>
+    <!--頁首固定欄位-->
     <header>
         <div class="logo">
-            <img src="/img/logo.png" alt="">
+            <img src="/img/logo.png" alt="Logo"/>
         </div>
         <nav>
-            <!--用ul、li是因為相同格式這樣我們只要統一對li做更動就能更動所有人！-->
+            <!--用<ul>、<li>是因為相同格式這樣我們只要統一對<li>做更動就能更動所有人！-->
             <ul>
                 <li>
                     <a href="#s1">都可以</a>
@@ -38,7 +39,47 @@
             <button type="submit">搜尋</button>
         </form>
     </header>
-    <section></section>
+
+    <!--圖片輪播區-->
+    <!--這裡的<section>特別取名，是為了不要更動到這個<section>同時也更動到<article>裡面的<section>-->
+    <section class="img-carousel">
+        <!--寫一個<div>來放圖片輪播的地方-->
+        <div class="img-container">
+            <div class="img-single">
+                <img src="/img/carousel-img1.png" alt="Img1">
+            </div>
+            <div class="img-single">
+                <img src="/img/carousel-img2.png" alt="Img2">
+            </div>
+            <div class="img-single">
+                <img src="/img/carousel-img3.png" alt="Img3">
+            </div>
+            <div class="img-single">
+                <img src="/img/carousel-img4.png" alt="Img4">
+            </div>
+            <div class="img-single">
+                <img src="/img/carousel-img5.png" alt="Img5">
+            </div>
+        </div>
+
+        <!--上下張照片的按鈕-->
+        <div class="img-btn-bar">
+            <!--注意！這邊有兩個class是因為change-btn可以當他們共用的class來設定樣式-->
+            <div class="prev-btn change-btn">〈</div>
+            <div class="next-btn change-btn">〉</div>
+        </div>
+
+        <!--選擇照片的點點欄-->
+        <div class="img-page-bar">
+            <div class="img-page" id="img-page-1"></div>
+            <div class="img-page" id="img-page-2"></div>
+            <div class="img-page" id="img-page-3"></div>
+            <div class="img-page" id="img-page-4"></div>
+            <div class="img-page" id="img-page-5"></div>
+        </div>
+    </section>
+
+    <!--文章區-->
     <article>
         <section id="s1">
             <h1>都可以</h1>
@@ -81,5 +122,7 @@
                 但丁講過一句話，容易發怒，是品格上最為顯著的弱點。這讓我深深地想到，我們都知道，只要有意義，那麽就必須慎重考慮。朗費羅有說過，當你的希望一個個落空，你也要堅定，要沉著！這似乎非常的有道理，對吧？薩迪曾經告訴世人，你在兩個仇人之間說話要有分寸，以免他們和好後你將無地自容。這讓我深深地想到，在這種困難的抉擇下，本人思來想去，寢食難安。這種事實對本人來說意義重大，相信對這個世界也是有一定意義的。塞涅卡曾經說過這麼一句話，真正的人生，只有在經過艱難卓絕的鬥爭之後才能實現。這似乎非常的有道理，對吧？而這些並不是完全重要，更加重要的問題是，&#36229;&#24290;的發生，到底需要如何做到，不&#36229;&#24290;的發生，又會如何產生。要想清楚，&#36229;&#24290;，到底是一種怎麽樣的存在。生活中，若&#36229;&#24290;出現了，我們就不得不考慮它出現了的事實。孔丘有說過，三軍可奪帥也，匹夫不可奪志也。這句話語雖然很短，但令我浮想聯翩。所謂&#36229;&#24290;，關鍵是&#36229;&#24290;需要如何寫。羅曼·羅蘭講過一句話，人生是一場賭博。不管人生的財博是得是損，只要該賭的肉尚剩一磅，我就會賭它。這果然是一句至理名言。為什麼是這樣呢？我們不得不面對一個非常尷尬的事實，那就是，問題的關鍵究竟為何？魯巴金曾經講過，讀書是在別人思想的幫助下，建立起自己的思想。帶著這句話，我們還要更加慎重的審視這個問題：布爾沃有講過一句名言，要掌握書，莫被書掌握；要為生而讀，莫為讀而生。這啟發了我，屠格涅夫有一句座右銘，凡事只要看得淡些，就沒有什麼可憂慮的了，只要不因憤怒而誇大事態，就沒有什麼事情值得生氣的了。這句話語雖然很短，但令我浮想聯翩。</p>
         </article>
     <footer></footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
